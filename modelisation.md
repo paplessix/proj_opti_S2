@@ -26,7 +26,7 @@ Notons :
 - $\Phi_s(t)$ le flux solaire arrivant sur la maison ($W/m^2$)
 - $\Phi_{int}(t)$ le flux intérieur  produit par le chauffage
 
-On considère dans un premier temps la capacité thermique des murs nulles. On supppose que le rayonnement est entièrement absorbé par la maison.
+Les principales sources de perturbation extérieures de la température sont, l'apport d'énergie par le soleil par rayonnement , et l'appport par le chauffage, on compte aussi la perte d'energie au nieveau des murs.
 
 On peut associer aux murs de la maison une résistance thermique telle que $\Delta T = R_{th}\Phi$. La résistance est donnée par $R_{th} = \frac{eL}{S}$ dans le cadre unidimensionnel.
 
@@ -37,6 +37,11 @@ $$C_{m}dT = W(t)dt + S_{ext}\Phi_s dt+ \frac{T_{ext}-T_{int}}{R_{th}}dt$$
 $$dT =\frac{1}{C_{m}}[W(t)dt + S_{ext}\Phi_s dt+ \frac{T_{ext}-T_{int}}{R_{th}}dt]$$
 
 où $W$ La puissance du radiateur à $t$, $C_{m}$ la capacité thermique de la maison
+$$\frac{dT}{dt} + \frac{T}{R_{th}C_{m}} =\frac{1}{C_{m}}[W(t) + S_{ext}\Phi_s+ \frac{T_{ext}}{R_{th}}]$$
+d'où :
+$$\Delta T= T_{i+1}-T_{i}=\frac{\tau}{C_{m}}[W(t) + S_{ext}\Phi_s+ \frac{T_{ext}-T_{i}}{R_{th}}]$$
+
+En supposant que W est constant dans l'intervalle $[i,i+1]$, la durée caractéristique de variation de $\Phi_s$
 
 On considère dans un premier temps la capacité thermique des murs nulles. On supppose que le rayonnement est entièrement absorbé par la maison.
 
